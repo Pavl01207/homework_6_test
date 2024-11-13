@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="/javascripts/RequestManager.js"></script>
+  </head>
+  <body>
+    <%- include('sections/header', { title: 'Caredit' }) %>
+    <hr />
+    <form action="/users" method="get">
+      <input type="text" name="name" placeholder="Name" />
+      <input type="number" name="age" placeholder="age" />
+      <button type="submit">Filter</button>
+      <a href="/users"><button>Clear</button></a>
+    </form>
+    <hr />
+    <table>
+      <thead>
+        <tr>
+          <th>Photo</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Email</th>
+          <th>Edit</th>
+          <th>Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% users.forEach(user => { %>
+        <tr>
+          <td>
+            <img
+              src="/uploads/<%= user.prodImg %>"
+              alt="logo"
+              class="img__container"
+            />
+          </td>
+          <td><%= user.name %></td>
+          <td><%= user.age %></td>
+          <td><%= user.email %></td>
+          <td>
+            <a href="/users/register/<%= user.id %>" class="add__button"
+              >Edit</a
+            >
+          </td>
+          <td>
+            <button
+              class="add__button"
+              onclick="RequestManager.deleteRequest('/users', '<%= user.id %>' )"
+            >
+              Delete
+            </button>
+          </td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+    <a href="/users/register" class="add__button">Add New Car</a>
+  </body>
+</html>

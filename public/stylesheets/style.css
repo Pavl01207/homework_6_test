@@ -1,0 +1,160 @@
+@import url(https://fonts.googleapis.com/css?family=Kanit:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+@import url(https://fonts.googleapis.com/css?family=Pacifico:regular);
+body {
+  padding: 50px;
+  font-family: "Kanit", serif;
+  font-size: 18px;
+  background: rgb(176, 173, 227);
+  background: linear-gradient(
+    90deg,
+    rgba(176, 173, 227, 1) 0%,
+    rgba(119, 200, 178, 1) 50%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+/*header style*/
+.header__container ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header__container li {
+  list-style: none;
+}
+.header__container a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid transparent;
+  padding: 5px 10px;
+}
+.header__container a:hover {
+  color: #564dd5;
+  border: 1px solid #564dd5;
+}
+/*----------------------*/
+/*footer style*/
+.footer__container {
+  margin-top: 40px;
+  display: flex;
+  justify-content: flex-end;
+}
+/*main style*/
+.main__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+.main__title {
+  font-size: 48px;
+  font-family: "Pacifico" serif;
+  text-transform: uppercase;
+  letter-spacing: 0.5em;
+}
+.main__title span {
+  font-size: 28px;
+  color: crimson;
+}
+.main__text {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-align: center;
+}
+[class$="main"] {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+}
+/*list style*/
+.add__button {
+  display: inline-block;
+  margin-top: 20px;
+  color: darkslategrey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid darkslategrey;
+  padding: 5px;
+  cursor: pointer;
+}
+.add__button:hover {
+  color: darkmagenta;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse; /* Злиття меж */
+}
+
+/* Стиль для заголовків таблиці */
+th {
+  background-color: #69b9d8;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Стиль для рядків таблиці */
+td {
+  padding: 8px;
+  text-align: center; /* Вирівнювання по центру */
+  border: 1px solid #ddd;
+}
+
+/* Альтернативний колір рядків */
+tr:nth-child(even) {
+  background-color: #f9f9f924;
+}
+
+/* Стиль для останнього ряду, наприклад, підсумку */
+tr:last-child {
+  background-color: #e0e0e0;
+  font-weight: bold;
+}
+table {
+  width: 100%;
+  border-collapse: collapse; /* Злиття меж */
+}
+
+/* Стиль для заголовків таблиці */
+th {
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Стиль для рядків таблиці */
+td {
+  padding: 8px;
+  text-align: center; /* Вирівнювання по центру */
+  border: 1px solid #ddd;
+}
+/* Стиль для останнього ряду, наприклад, підсумку */
+tr:last-child {
+  font-weight: bold;
+}
+.add__button {
+  display: inline-block;
+  margin-top: 20px;
+  color: darkslategrey;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  border: 1px solid darkslategrey;
+  padding: 5px;
+  cursor: pointer;
+}
+.add__button:hover {
+  color: darkmagenta;
+}
+/*--------------*/
+.img__container {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
